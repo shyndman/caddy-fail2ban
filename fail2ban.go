@@ -73,7 +73,7 @@ func (m *Fail2Ban) Match(req *http.Request) bool {
         // Only ban if header X-Caddy-Ban is sent
         _, ok := req.Header["X-Caddy-Ban"]
         if ok {
-                m.logger.Info("banned IP", zap.String("remote_ip", remoteIP), zap.String("clientIP", client_ip))
+                m.logger.Info("banned IP", zap.String("remote_ip", remoteIP), zap.String("clientIP", clientIP))
                 return true
         }
 
