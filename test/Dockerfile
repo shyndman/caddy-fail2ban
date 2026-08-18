@@ -7,7 +7,7 @@ COPY ./go.mod /src/caddy-fail2ban/
 RUN --mount=type=cache,target=/root/.cache/go-build \
   --mount=type=cache,target=/go/pkg/mod \
   xcaddy build \
-    --with github.com/Javex/caddy-fail2ban=/src/caddy-fail2ban
+    --with github.com/shyndman/caddy-fail2ban=/src/caddy-fail2ban
 
 FROM caddy:2.7
 
